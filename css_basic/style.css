@@ -1,0 +1,87 @@
+/* styles.css - Specific styles for Flexbox layout */
+
+/* Ensure body and html take full viewport height for flexbox to work correctly */
+html, body {
+    height: 100%;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+/* Body as a flex container for header, main, footer (column layout) */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main as a flex container for article and aside (row layout) */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* Allows main to grow and shrink, taking available space */
+    /* Add some padding or margin to main if needed for spacing */
+}
+
+/* Article takes 2/3 of the available space within main */
+article {
+    flex: 2; /* Takes 2 parts of the flexible space */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+    padding: 15px; /* Add some padding for content readability */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Aside takes 1/3 of the available space within main */
+aside {
+    flex: 1; /* Takes 1 part of the flexible space */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+    padding: 15px; /* Add some padding for content readability */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    background-color: #e9e9e9; /* Optional: differentiate aside visually */
+}
+
+/* Optional: Basic styling for header and footer for visual clarity */
+header, footer {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Make navigation links flex for horizontal layout */
+    justify-content: center; /* Center the links */
+    gap: 20px; /* Space between links */
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Basic table styling for readability */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
