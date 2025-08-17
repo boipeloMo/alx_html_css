@@ -38,4 +38,4 @@ The goal is to replicate the design details accurately while ensuring the site i
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/boipeloMo,7/alx_html_css.git
+   git clone https://github.com/boipeloMo/alx_html_css.git
